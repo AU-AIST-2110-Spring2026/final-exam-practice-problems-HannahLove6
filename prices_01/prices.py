@@ -9,8 +9,19 @@ def filter_prices(prices: list[float]) -> list[float]:
 
     # List where you should store the filtered prices
     filtered_prices = []
-
+    
     # Step 1: Filter prices
+    
+        
+    for pricey in prices:
+        if pricey>=5.00 and pricey<=25.00:
+            filtered_prices.append(pricey)
+            filtered_prices.sort()
+            round(filtered_prices)
+        print (filtered_prices)
+            
+        
+            
     # Prices should be greater than or equal to 5.00
     # Prices should be less than or equal to 25.00
     # Prices should be whole-dollar amounts, such as 8.00 or 10.00
