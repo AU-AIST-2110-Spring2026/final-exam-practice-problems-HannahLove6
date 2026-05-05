@@ -1,6 +1,6 @@
 campus = {
     "Library": {"pathways": {"n": "Science Hall", "e": "Student Center"}, "open_with": ""},
-    "Science Hall": {"pathways": {"s": "Library", "e": "Research Lab"}, "open_with": ""},
+    "Science Hall": {"pathways": {"s": "Library", "e": "Research Lab"}, "open_with": "Gym Card"},
     "Student Center": {"pathways": {"w": "Library", "n": "Gym"}, "open_with": ""},
     "Research Lab": {"pathways": {"w": "Science Hall"}, "open_with": "Lab Pass"},
     "Gym": {"pathways": {"s": "Student Center"}, "open_with": "Gym Card"},
@@ -24,28 +24,48 @@ def get_directions(location: str) -> list[str]:
     #
     # Example:
     # If location is "Library", this function should return ["n", "e"].
-    directions=[]
+    
     #pathways=campus[location]["pathways"]
     #if directions in pathways:
 
     directions = []
     
-    pathways_from_location = campus[location]["pathways"]
+    # pathways_from_location = campus[location]["pathways"]
     
-    for direction in pathways_from_location:
-        room = pathways_from_location[direction]
-        if campus[room]["open_with"] == "":
-            directions.append(direction)
+    # for direction in pathways_from_location:
+    #     room = pathways_from_location[direction]
+    #     if campus[room]["open_with"] == "":
+    #         directions.append(direction)
       
-    else:
-            {}
+    # else:
+    #         {}
             
+    # return directions
+    
+    # path=campus[location]["pathways"]
+    # for direction in path:
+    #     room=path[direction]
+    #     if campus[room]["open_with"]=="":
+    #         directions.append(direction)
+    #         return directions
+    #     else:
+    #         {}
+    # for location in campus:
+    #     if location !="Gym Card":
+    #         if location!="Lab Pass":
+                
+    #              directions.append(campus[location]["pathways"])
+    #              return directions
+    #     else:
+    #         {}
+    path=campus[location]["pathways"]
+    for pathy in path:
+        room=path[pathy]
+        if campus[room]["open_with"]=="":
+            directions.append(pathy)
+        else:
+            {}
     return directions
-    
-
-
-    
-
 
 def main():
     '''DO NOT MODIFY THIS FUNCTION'''
