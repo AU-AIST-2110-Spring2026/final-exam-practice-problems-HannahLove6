@@ -14,11 +14,12 @@ def get_routes(location:str) -> list[str]:
     """Return routes to connected stations that do not require a pass."""
     yes=[]
     path=stations[location]["routes"]
-    for direction in path:
-        stop=path[direction]
-        if stations[stop]["open_with"]=="":
-            yes.append(direction)
+    for pathy in path:
+        room=path[pathy]
+        if stations[room]["open_with"]=="":
+            yes.append(pathy)
     return yes
+    
     # Modify this function to iterate through all stations connected
     # to the variable location.
     #

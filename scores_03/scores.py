@@ -8,6 +8,11 @@ def filter_scores(scores: list[int]) -> list[int]:
 
     # List where you should store the filtered scores
     filtered_scores = []
+    for score in scores:
+        if score>=70 and score<=90 and score%2==0:
+            filtered_scores.append(score)
+            filtered_scores.sort(reverse=True)
+    return filtered_scores
     #  for score in scores:
     #      if score<=90 and score>=70:
     #              if score%2==0:
@@ -29,12 +34,12 @@ def filter_scores(scores: list[int]) -> list[int]:
 	
     # return filtered_scores
     
-    for score in scores:
-        if score>=70 and score <=90 and score%2==0:
-            filtered_scores.append(score)
+    # for score in scores:
+    #     if score>=70 and score <=90 and score%2==0:
+    #         filtered_scores.append(score)
 
-            filtered_scores.sort(reverse=True)
-    return filtered_scores
+    #         filtered_scores.sort(reverse=True)
+    # return filtered_scores
     # Step 1: Filter scores
     # Scores should be greater than or equal to 70
     # Scores should be less than or equal to 90

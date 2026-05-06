@@ -11,14 +11,17 @@ def filter_prices(prices: list[float]) -> list[float]:
     filtered_prices = []
     
     # Step 1: Filter prices
-    
-        
     for pricey in prices:
         if pricey>=5.00 and pricey<=25.00 and pricey%2==0:
             filtered_prices.append(pricey)
             filtered_prices.sort()
+    return filtered_prices
+    # for pricey in prices:
+    #     if pricey>=5.00 and pricey<=25.00 and pricey%2==0:
+    #         filtered_prices.append(pricey)
+    #         filtered_prices.sort()
             
-    return (filtered_prices)
+    # return (filtered_prices)
             
         
             
